@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    overflow-x: hidden;
+}
+#background {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+#wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: url( https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-size: contain;
+    background-position: 60%;
+}
+
+#background h1 {
+    color: #fff;
+    font-size: 33vw ;
+    font-weight: 900;
+}
+#circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1.2px solid #ffffff;
+    z-index: 999;
+    pointer-events: none;
+}
+#whitestrip {
+    /* transform translate first value width par ceneter kany ke liye hoti hy  */
+    /* transform translate second value height par ceneter kany ke liye hoti hy  */
+    transform: translate(0% , -50%);
+    width: 53%;
+    height: 110px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blackcard{
+    /* width: 200px;
+    height: 300px; */
+    width: 190px;
+    height: 235px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+}
+#blackcard p {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+#whitestrip #lineelem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#whitestrip #lineelem .line {
+    width: 200px ;
+    height: 2px ;
+    background-color: black;
+}
+#whitestrip #lineelem h4{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+#whitestrip #lineelem i {
+    font-size: 22px;
+    cursor: pointer;
+}
+#background #unleash-exp-heading{
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 10px;
+    transform: rotate(-90deg);
+    color: white;
+}
+svg {
+    position: absolute;
+    top:  50%;
+    left:  50%;
+    transform: translate(-50% , -50%);
+    z-index: 99999999;
+    stroke-dashoffset: 1000px   ;
+    stroke-dasharray: 1000px ;
+}
+.animate {
+    animation: animation 10s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+@keyframes animation {
+    to{
+        stroke-dasharray: 450px;
+    }
+}
